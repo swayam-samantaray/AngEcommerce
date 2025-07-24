@@ -1,0 +1,31 @@
+<div class="container mt-4" *ngIf="product">
+  <div class="card">
+    <div class="card-body" style="background-color: bisque;">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <img
+          [src]="product.imageUrl"
+          class="card-img-top"
+          [alt]="product.name"
+          style="height: 200px; object-fit: contain;"
+          (error)="product.imageUrl = 'assets/images/default.png'" />
+        </div>
+        <div class="col-lg-8 col-12">
+          <h3>{{ product.name }}</h3>
+          <p><strong>Price:</strong> {{ product.price  | currency:'INR':'symbol'}}</p>
+          <h6><strong><u>Brief Description</u></strong></h6>
+          <p style="text-align: justify;">{{ product.description }}</p>
+          <h6><strong><u>Specification</u></strong></h6>
+          <p style="text-align: justify;">{{ product.specification }}</p>
+          <button class="btn btn-sm btn-primary" (click)="addToCart()">Add to Cart</button>
+          &nbsp;
+          <a class="btn btn-sm btn-info" routerLink="/products">Back to Products</a>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4" *ngIf="!product">
+  <p>Product not found.</p>
+</div>

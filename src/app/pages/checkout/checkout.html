@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <h2>Checkout</h2>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" formControlName="name" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label>Address</label>
+      <input type="text" formControlName="address" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label>Card Number</label>
+      <input type="text" formControlName="cardNumber" class="form-control" />
+      <div *ngIf="checkoutForm.get('cardNumber')?.invalid && checkoutForm.get('cardNumber')?.touched" class="text-danger">
+      Card number must be 16 digits
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Expiration</label>
+        <input type="text" formControlName="expiration" class="form-control" placeholder="MM/YY" />
+      </div>
+      <div class="col">
+        <label>CVV</label>
+        <input type="text" formControlName="cvv" class="form-control" />
+          <div *ngIf="checkoutForm.get('cvv')?.invalid && checkoutForm.get('cvv')?.touched" class="text-danger">
+          CVV number must be 3 digits
+          </div>        
+      </div>
+    </div>
+    <h4>Total: ${{ total }}</h4>
+    <button type="submit" class="btn btn-success" [disabled]="checkoutForm.invalid">Place Order</button>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+/* Background */
+.bg-blue-light {
+  background: linear-gradient(to right, #dbeafe, #eff6ff);
+}
+
+/* Glossy Card */
+.glossy-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
+}
+.glossy-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Form Controls */
+.form-control {
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+  transition: box-shadow 0.2s ease;
+}
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.25);
+}
+
+/* Button */
+.btn-primary {
+  background-color: #3b82f6;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #2563eb;
+}

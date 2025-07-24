@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop 1",
+    "price": 75000,
+    "discount_price": 65000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "High-end laptop",
+    "imageUrl": "assets/images/laptop1.png",
+    "category": "Electronics",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 2,
+    "name": "A23 Phone",
+    "price": 22000,
+    "discount_price": 20000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Smartphone",
+    "imageUrl": "assets/images/phone1.png",
+    "category": "Mobiles",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 3,
+    "name": "A16 Phone",
+    "price": 25000,
+    "discount_price": 20000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Smartphone",
+    "imageUrl": "assets/images/phone2.png",
+    "category": "Mobiles",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 4,
+    "name": "A14 Phone",
+    "price": 18500,
+    "discount_price": 15000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Smartphone",
+    "imageUrl": "assets/images/phone3.png",
+    "category": "Mobiles",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 5,
+    "name": "Laptop 2",
+    "price": 60000,
+    "discount_price": 45000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Gaming Laptop",
+    "imageUrl": "assets/images/laptop2.png",
+    "category": "Electronics",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 6,
+    "name": "OMEN Laptop",
+    "price": 80000,
+    "discount_price": 65000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Gaming Laptop",
+    "imageUrl": "assets/images/laptop3.png",
+    "category": "Electronics",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 7,
+    "name": "Boat Rockerz",
+    "price": 1250,
+    "discount_price": 700,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Boat Rockerz 425 Bluetooth",
+    "imageUrl": "assets/images/headphone1.png",
+    "category": "Utilities",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  },
+  {
+    "id": 8,
+    "name": "Cosmic Byte",
+    "price": 3300,
+    "discount_price": 2000,
+    "quantity": 10,
+    "balancequantity": 10,
+    "description": "Cosmic Byte Hades 2.4Ghz",
+    "imageUrl": "assets/images/headphone2.png",
+    "category": "Utilities",
+    "specification": "Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme."
+  }
+]

@@ -1,0 +1,180 @@
+<div class="container mt-4">
+
+<h2>{{ editMode ? 'Edit Product' : 'Add New Product' }}</h2>
+
+<form #productForm="ngForm"  novalidate>
+  <div class="card">
+    <!-- Product Name -->
+    <div class="form-group">
+      <label for="name">Product Name (max 100)</label>
+      <input
+        id="name"
+        name="name"
+        required
+        maxlength="100"
+        [(ngModel)]="newProduct.name"
+        #nameRef="ngModel"
+        placeholder="Enter product name"
+      />
+      <small *ngIf="nameRef.invalid && nameRef.touched" class="error">
+        Product name is required and must be under 100 characters.
+      </small>
+      <small class="counter">{{ 100 - (newProduct.name?.length || 0) }} characters left</small>
+    </div>
+
+<!-- Category -->
+<div class="form-group">
+  <label for="category">Category</label>
+  <select
+    id="category"
+    name="category"
+    required
+    [(ngModel)]="newProduct.category"
+    #categoryRef="ngModel"
+    class="form-control"
+  >
+    <option value="" disabled selected>Select a category</option>
+    <option *ngFor="let cat of categoryOptions" [value]="cat">
+      {{ cat }}
+    </option>
+  </select>
+
+  <small *ngIf="categoryRef.invalid && categoryRef.touched" class="error">
+    Category is required.
+  </small>
+</div>
+
+
+    <!-- Price -->
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        id="price"
+        name="price"
+        type="number"
+        required
+        [(ngModel)]="newProduct.price"
+        #priceRef="ngModel"
+        placeholder="Enter price"
+        class="form-control"
+      />
+      <small *ngIf="priceRef.invalid && priceRef.touched" class="error">
+        Price is required.
+      </small>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description (max 1000)</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        maxlength="1000"
+        required
+        [(ngModel)]="newProduct.description"
+        #descRef="ngModel"
+        placeholder="Enter description"
+      ></textarea>
+      <small *ngIf="descRef.invalid && descRef.touched" class="error">
+        Description is required and must be under 1000 characters.
+      </small>
+      <small class="counter">{{ 1000 - (newProduct.description?.length || 0) }} characters left</small>
+    </div>
+
+    <!-- Specification -->
+    <div class="form-group">
+      <label for="specification">Specification (max 1000)</label>
+      <input
+        id="specification"
+        name="specification"
+        required
+        maxlength="1000"
+        [(ngModel)]="newProduct.specification"
+        #specRef="ngModel"
+        placeholder="Enter specification"
+      />
+      <small *ngIf="specRef.invalid && specRef.touched" class="error">
+        Specification is required and must be under 1000 characters.
+      </small>
+      <small class="counter">{{ 50 - (newProduct.specification?.length || 0) }} characters left</small>
+    </div>
+
+        <!-- discounted Price -->
+    <div class="form-group">
+      <label for="discount_price">discounted Price</label>
+      <input
+        id="discount_price"
+        name="discount_price"
+        type="number"
+        required
+        [(ngModel)]="newProduct.discount_price"
+        #discount_priceRef="ngModel"
+        placeholder="Enter discounted price"
+      />
+      <small *ngIf="discount_priceRef.invalid && discount_priceRef.touched" class="error">
+        Price is required.
+      </small>
+    </div>
+   
+      <!-- Quantity -->
+    <div class="form-group">
+      <label for="quantity">quantity</label>
+      <input
+        id="quantity"
+        name="quantity"
+        type="number"
+        required
+        [(ngModel)]="newProduct.quantity"
+        #quantityRef="ngModel"
+        placeholder="Enter quantity"
+      />
+      <small *ngIf="quantityRef.invalid && quantityRef.touched" class="error">
+        quantity is required.
+      </small>
+    </div>
+
+      <!-- Balance Quantity -->
+    <div class="form-group">
+      <label for="balancequantity">Balance quantity</label>
+      <input
+        id="balancequantity"
+        name="balancequantity"
+        type="number"
+        required
+        [(ngModel)]="newProduct.balancequantity"
+        #balancequantityRef="ngModel"
+        placeholder="Enter balance quantity"
+      />
+      <small *ngIf="balancequantityRef.invalid && balancequantityRef.touched" class="error">
+        balance quantity is required.
+      </small>
+    </div>
+
+    <!-- Image Upload -->
+    <div class="form-group">
+      <label for="image">Product Image (JPG/PNG only)</label>
+      <input
+        id="image"
+        type="file"
+        accept="image/png, image/jpeg"
+        (change)="onImageSelected($event)"
+      />
+    </div>
+
+    <!-- Image Preview -->
+    <div class="image-preview" *ngIf="newProduct.imageUrl">
+      <img [src]="newProduct.imageUrl" alt="Image Preview" />
+    </div>
+
+    <!-- Submit Button -->
+   <button 
+  (click)="addOrUpdateProduct()" 
+  [disabled]="!isFormValid()" 
+  class="submit-btn">
+  {{ editMode ? 'Update Product' : 'Add Product' }}
+</button>
+  </div>
+</form>
+
+</div>

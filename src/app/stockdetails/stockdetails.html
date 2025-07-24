@@ -1,0 +1,74 @@
+<div class="container mt-4">
+  <hr />
+  <h2 class="mb-4">📦 Product Management</h2>
+
+  <!-- Search Box -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input
+        type="text"
+        [(ngModel)]="searchText"
+        (input)="filterProducts()"
+        placeholder="🔍 Search by name, category, price, or ID"
+        class="form-control shadow-sm"
+      />
+    </div>
+  </div>
+
+  <!-- Products Table -->
+  <div class="table-responsive shadow-sm">
+    <table class="table table-hover table-bordered align-middle">
+      <thead class="table-primary text-center">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+           <th>Discounted Price (₹)</th>
+          <th>Total Quantity</th>
+           <th>Stock Quantity</th>
+          <th style="width: 160px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="filteredProducts.length > 0; else noProducts">
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+           <td>₹ {{ product.discount_price | number:'1.2-2' }}</td>
+            <td>{{ product.quantity  }}</td>
+            <td>{{ product.balancequantity}}</td>
+         
+        <td class="text-center align-middle">
+  <div class="btn-group" role="group">
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-info me-1"
+      (click)="editProduct(product.id)"
+    >
+      ✏️ Edit
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-danger me-1"
+      (click)="deleteProduct(product.id)"
+    >
+      🗑️ Delete
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm btn-primary"
+      (click)="navigateToViewDetails(product.id)"
+    >
+      🔍 View
+    </button>
+  </div>
+</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Product Found Message -->
+  <ng-template #noProducts>
+    <div class="text-center text-muted mt-3">No products available.</div>
+  </ng-template>
+</div>
