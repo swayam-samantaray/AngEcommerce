@@ -1,0 +1,61 @@
+ .order-success-container {
+        text-align: center;
+        padding: 50px 20px;
+        animation: fadeInUp 0.8s ease-in-out;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #28a745;
+        animation: bounceIn 1s;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #555;
+      }
+
+      .btn-group {
+        margin-top: 30px;
+      }
+
+      .btn-primary {
+        margin: 0 10px;
+        padding: 10px 25px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .celebrate-emoji {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }

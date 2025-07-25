@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // 👈 Required
+import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart';
-import { CartItem } from '../../models/cart.model'; // fix import
+import { CartItem } from '../../models/cart.model';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './cart.html',
   styleUrl: './cart.scss',
@@ -24,7 +25,7 @@ export class Cart implements OnInit {
 
   increaseQuantity(item: CartItem): void {
     item.quantity++;
-    this.cartService.saveCart(); // Add this method to CartService or call update
+    this.cartService.saveCart();
     this.calculateTotal();
     this.cartService.updateItemCount();
   }
